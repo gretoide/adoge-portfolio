@@ -1,9 +1,9 @@
-import './App.css';
-import Hero from './Hero';
-import Services from './Services';
-import About from './About';
-import Contact from './Contact';
-import Footer from './Footer';
+import './styles/App.css';
+import Hero from './components/Hero/Hero';
+import Services from './components/Services/Services';
+import About from './components/About/About';
+import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
