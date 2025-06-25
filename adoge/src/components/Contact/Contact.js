@@ -62,8 +62,9 @@ const Contact = () => {
         )}
       </form>
       <div className="contact-info">
-        <p>Email: contacto@adoge.com</p>
-        <p>Tel: +54 9 11 1234-5678</p>
+        <p>Email: adogeinnovations@gmail.com</p>
+        <p>Tel: +54 221 476 2150</p>
+        <p>Tel: +54 221 314 4468</p>
       </div>
     </section>
   );
