@@ -71,12 +71,12 @@ const Contact = () => {
         <div className="contact-wsp-line">
           <i className="fab fa-whatsapp text-success me-2"></i>
           <a href="https://wa.me/542214762150" target="_blank" rel="noopener noreferrer">
-            Adrian
+            Adrian +54 221 476 2150
           </a>
           <span className="wsp-sep"> | </span>
           <i className="fab fa-whatsapp text-success me-2"></i>
           <a href="https://wa.me/542213144468" target="_blank" rel="noopener noreferrer">
-            Greta
+            Greta +54 221 314 4468
           </a>
         </div>
       </div>

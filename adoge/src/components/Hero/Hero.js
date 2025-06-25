@@ -6,6 +6,7 @@ const Hero = () => {
     <section className="hero">
       <div className="hero-content animated-fade-in">
         <h1 className="animated-slide-in">AdoGe</h1>
+        <div className="hero-underline"></div>
         <p className="animated-slide-in" style={{ animationDelay: '0.3s' }}>Impulsamos tu presencia digital</p>
         <a href="#contact" className="cta-button animated-fade-in" style={{ animationDelay: '0.6s' }}>¡Trabajemos juntos!</a>
       </div>
