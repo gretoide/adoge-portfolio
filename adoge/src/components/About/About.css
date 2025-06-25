@@ -50,6 +50,7 @@
   flex-wrap: wrap;
   gap: 3.5em;
   justify-content: center;
+  margin-top: 3.5em;
 }
 
 .about-card {
