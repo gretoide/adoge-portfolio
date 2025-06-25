@@ -62,15 +62,30 @@
 
 @media (max-width: 768px) {
   .services {
-    padding: 60px 20px;
+    padding: 40px 0 40px 0;
   }
-  
   .services h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5em;
+    font-size: 1.5rem;
+    margin-bottom: 1.1em;
   }
-  
+  .services-list {
+    flex-direction: column;
+    gap: 1.2em;
+    align-items: center;
+  }
   .service-card {
-    min-width: 100%;
+    min-width: 0;
+    width: 95vw;
+    max-width: 98vw;
+    padding: 1.2em 0.7em;
+    font-size: 0.98rem;
+    text-align: center;
+  }
+  .service-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.7em;
+  }
+  .service-card p {
+    font-size: 0.97rem;
   }
 } 

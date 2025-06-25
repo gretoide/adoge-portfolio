@@ -11,10 +11,10 @@ const Contact = () => {
     setStatus('sending');
 
     emailjs.sendForm(
-      'YOUR_SERVICE_ID', // Reemplazar con tu Service ID de EmailJS
-      'YOUR_TEMPLATE_ID', // Reemplazar con tu Template ID de EmailJS
+      'service_g129r7l', // Service ID
+      'template_6380uaw', // Template ID
       form.current,
-      'YOUR_PUBLIC_KEY' // Reemplazar con tu Public Key de EmailJS
+      'FvJ9iHKeHBixh9Vde' // Public Key
     )
       .then((result) => {
         setStatus('success');
