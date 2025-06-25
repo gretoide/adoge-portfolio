@@ -32,13 +32,13 @@ const Contact = () => {
       <form ref={form} onSubmit={sendEmail} className="contact-form">
         <input 
           type="text" 
-          name="user_name"
+          name="name"
           placeholder="Nombre" 
           required 
         />
         <input 
           type="email" 
-          name="user_email"
+          name="email"
           placeholder="Email" 
           required 
         />
