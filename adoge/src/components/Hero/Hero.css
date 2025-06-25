@@ -4,9 +4,9 @@
   color: #fff;
   padding: 0 20px;
   text-align: center;
-  min-height: 60vh;
-  height: 60vh;
-  max-height: 600px;
+  min-height: 80vh;
+  height: 80vh;
+  max-height: 900px;
   overflow: hidden;
   display: flex;
   align-items: center;
