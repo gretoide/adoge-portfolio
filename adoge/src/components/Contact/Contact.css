@@ -79,6 +79,20 @@
   color: #333;
   font-size: 1.1rem;
 }
+.contact-info a {
+  text-decoration: none;
+  font-weight: 500;
+}
+.contact-info a[href^="mailto"] {
+  color: #1e3c72;
+}
+.contact-info a[href^="https://wa.me"] {
+  color: #25d366;
+}
+.contact-info a:hover {
+  text-decoration: underline;
+  opacity: 0.85;
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -97,4 +111,33 @@
   .contact h2 {
     font-size: 1.8rem;
   }
+}
+.contact-wsp-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7em;
+  margin-top: 0.7em;
+  font-size: 1.13rem;
+}
+.contact-wsp-line a {
+  color: #25d366;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 0 0.2em;
+  transition: color 0.2s;
+}
+.contact-wsp-line a:hover {
+  text-decoration: underline;
+  color: #128c7e;
+}
+.contact-wsp-line .fab.fa-whatsapp {
+  font-size: 1.25em;
+  margin-right: 0.2em;
+}
+.wsp-sep {
+  color: #bbb;
+  font-size: 1.2em;
+  margin: 0 0.5em;
+  user-select: none;
 } 

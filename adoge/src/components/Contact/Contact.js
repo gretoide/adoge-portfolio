@@ -61,10 +61,24 @@ const Contact = () => {
           <p className="error-message">Hubo un error al enviar el mensaje. Por favor, intenta nuevamente.</p>
         )}
       </form>
-      <div className="contact-info">
-        <p>Email: adogeinnovations@gmail.com</p>
-        <p>Tel: +54 221 476 2150</p>
-        <p>Tel: +54 221 314 4468</p>
+      <div className="contact-info mt-4">
+        <p>
+          <i className="fas fa-envelope text-primary me-2"></i>
+          <a href="mailto:adogeinnovations@gmail.com" className="text-decoration-none">
+            adogeinnovations@gmail.com
+          </a>
+        </p>
+        <div className="contact-wsp-line">
+          <i className="fab fa-whatsapp text-success me-2"></i>
+          <a href="https://wa.me/542214762150" target="_blank" rel="noopener noreferrer">
+            Adrian
+          </a>
+          <span className="wsp-sep"> | </span>
+          <i className="fab fa-whatsapp text-success me-2"></i>
+          <a href="https://wa.me/542213144468" target="_blank" rel="noopener noreferrer">
+            Greta
+          </a>
+        </div>
       </div>
     </section>
   );
