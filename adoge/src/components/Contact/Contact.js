@@ -11,7 +11,7 @@ const Contact = () => {
     setStatus('sending');
 
     emailjs.sendForm(
-      'service_g129r7l', // Service ID
+      'service_m4wwr3i', // Service ID
       'template_6380uaw', // Template ID
       form.current,
       'FvJ9iHKeHBixh9Vde' // Public Key
@@ -30,36 +30,12 @@ const Contact = () => {
     <section className="contact" id="contact">
       <h2>Contacto</h2>
       <form ref={form} onSubmit={sendEmail} className="contact-form">
-        <input 
-          type="text" 
-          name="name"
-          placeholder="Nombre" 
-          required 
-        />
-        <input 
-          type="email" 
-          name="email"
-          placeholder="Email" 
-          required 
-        />
-        <textarea 
-          name="message"
-          placeholder="Tu mensaje" 
-          required
-        ></textarea>
-        <button 
-          type="submit" 
-          disabled={status === 'sending'}
-          className={status}
-        >
-          {status === 'sending' ? 'Enviando...' : 'Enviar'}
-        </button>
-        {status === 'success' && (
-          <p className="success-message">¡Mensaje enviado con éxito!</p>
-        )}
-        {status === 'error' && (
-          <p className="error-message">Hubo un error al enviar el mensaje. Por favor, intenta nuevamente.</p>
-        )}
+        <input type="hidden" name="title" value="Contacto Web" />
+        <input type="hidden" name="time" value= {new Date().toLocaleString()}/>
+        <input type="text" name="name" placeholder="Nombre" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="message" placeholder="Tu mensaje" required></textarea>
+        <button type="submit">Enviar</button>
       </form>
       <div className="contact-info mt-4">
         <p>
