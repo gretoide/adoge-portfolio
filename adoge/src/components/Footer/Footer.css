@@ -44,7 +44,7 @@ footer {
 }
 
 .footer-copyright {
-  margin-bottom: 0.2em;
+  margin: 0.5em;
 }
 
 @media (max-width: 700px) {
