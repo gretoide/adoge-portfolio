@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './Hero.css';
+import logoAdoge from '../../images/logo_adoge.png';
 
 const Hero = () => {
   // Animaciones de entrada con stagger
@@ -98,6 +99,11 @@ const Hero = () => {
         initial="hidden"
         animate="visible"
       >
+        <img 
+          src={logoAdoge} 
+          alt="Logo Adoge" 
+          style={{ width: '170px', marginBottom: '1rem' }} 
+        />
         <motion.h1 
           variants={itemVariants}
           whileHover={{ 
