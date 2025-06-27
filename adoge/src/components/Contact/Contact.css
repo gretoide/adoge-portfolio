@@ -237,6 +237,68 @@ section.contact {
   color: #fff;
 }
 
+.wsp-menu {
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  background: #fff;
+  border-radius: 0.5em;
+  box-shadow: 0 4px 16px rgba(91,193,155,0.13);
+  padding: 0.18em 0.3em 0.18em 0.3em;
+  min-width: 70px;
+  max-width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  animation: fadeInWspMenu 0.15s ease;
+}
+
+@keyframes fadeInWspMenu {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.wsp-menu-title {
+  font-size: 0.53em;
+  color: #393963;
+  font-weight: 600;
+  margin-bottom: 0.25em;
+  line-height: 1.2;
+}
+
+.wsp-menu-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+  background: #f7f8fa;
+  color: #393963;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.13em 0.5em;
+  margin-bottom: 0.18em;
+  font-size: 0.69em;
+  text-decoration: none;
+  transition: background 0.12s, color 0.12s;
+  cursor: pointer;
+  min-width: 55px;
+  justify-content: center;
+}
+
+.wsp-menu-btn:last-child {
+  margin-bottom: 0;
+}
+
+.wsp-menu-btn:hover {
+  background: #e0f3ec;
+  color: #393963;
+}
+
+.wsp-menu-icon {
+  color: #5bc19b;
+  font-size: 0.95em;
+}
+
 @media (max-width: 700px) {
   .whatsapp-float {
     right: 1.2rem;
@@ -244,5 +306,15 @@ section.contact {
     width: 48px;
     height: 48px;
     font-size: 1.5rem;
+  }
+  .wsp-menu {
+    min-width: 40px;
+    max-width: 90px;
+    padding: 0.08em 0.08em 0.08em 0.08em;
+  }
+  .wsp-menu-btn {
+    font-size: 0.78em;
+    padding: 0.08em 0.3em;
+    min-width: 30px;
   }
 } 

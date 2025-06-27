@@ -1,11 +1,42 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import { FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 import './Contact.css';
 
+const WHATSAPP_CONTACTS = [
+  {
+    name: 'Adrian',
+    number: '542214762150',
+    href: 'https://wa.me/542214762150',
+  },
+  {
+    name: 'Greta',
+    number: '542213144468',
+    href: 'https://wa.me/542213144468',
+  },
+];
+
 const Contact = () => {
   const form = useRef();
   const [status, setStatus] = useState('');
+  const [showWspMenu, setShowWspMenu] = useState(false);
+  const wspMenuRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (wspMenuRef.current && !wspMenuRef.current.contains(event.target)) {
+        setShowWspMenu(false);
+      }
+    }
+    if (showWspMenu) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [showWspMenu]);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -46,15 +77,26 @@ const Contact = () => {
           </a>
         </p>
       </div>
-      <a
-        href="https://wa.me/542214762150"
-        className="whatsapp-float"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Contactar por WhatsApp"
-      >
+      <div className="whatsapp-float" onClick={() => setShowWspMenu((v) => !v)} tabIndex={0} aria-label="Contactar por WhatsApp">
         <FaWhatsapp />
-      </a>
+        {showWspMenu && (
+          <div className="wsp-menu" ref={wspMenuRef}>
+            <span className="wsp-menu-title">Contactar por WhatsApp:</span>
+            {WHATSAPP_CONTACTS.map((c) => (
+              <a
+                key={c.number}
+                href={c.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="wsp-menu-btn"
+                onClick={() => setShowWspMenu(false)}
+              >
+                <FaWhatsapp className="wsp-menu-icon" /> {c.name}
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
     </section>
   );
 };
