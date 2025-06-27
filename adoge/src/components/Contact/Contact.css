@@ -338,4 +338,46 @@ section.contact {
     margin-right: 0.3em;
     vertical-align: middle;
   }
+}
+
+.success-tick {
+  color: #27ae60;
+  font-size: 2.2em;
+  vertical-align: middle;
+  margin-right: 0.5em;
+  animation: popIn 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  animation: fadeInScale 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 } 

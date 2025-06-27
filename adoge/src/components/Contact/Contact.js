@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
-import { FaEnvelope, FaWhatsapp } from 'react-icons/fa';
+import { FaEnvelope, FaWhatsapp, FaCheckCircle } from 'react-icons/fa';
 import './Contact.css';
 
 const WHATSAPP_CONTACTS = [
@@ -69,6 +69,17 @@ const Contact = () => {
         <textarea name="message" placeholder="Tu mensaje" required></textarea>
         <button type="submit">Enviar</button>
       </form>
+      {status === 'success' && (
+        <div className="success-message animated-success">
+          <FaCheckCircle className="success-tick" />
+          ¡Tu mensaje fue enviado con éxito! Pronto nos pondremos en contacto.
+        </div>
+      )}
+      {status === 'error' && (
+        <div className="error-message">
+          Ocurrió un error al enviar el mensaje. Intenta nuevamente más tarde.
+        </div>
+      )}
       <div className="contact-info mt-4">
         <p>
           <FaEnvelope className="contact-icon email" />
