@@ -110,14 +110,14 @@
 
 .about-card h3 {
   color: #7E3992;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 0.7rem;
 }
 
 .about-card p, .about-card ul, .about-card li {
   color: #181828;
-  font-size: 1rem;
+  font-size: 1.08rem;
 }
 
 .about-card:hover {
@@ -252,6 +252,7 @@
   font-weight: 600;
   text-decoration: none;
   transition: color 0.2s ease;
+  font-size: 1.08rem;
 }
 
 .profile-card a:hover {

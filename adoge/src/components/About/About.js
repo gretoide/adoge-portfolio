@@ -15,12 +15,10 @@ const About = () => (
       <div className="about-card">
         <div className="about-icon"><FaBullseye /></div>
         <h3>¿A quién acompañamos?</h3>
-        <div className="about-list">
           <div><strong>Emprendedores</strong> que están empezando y necesitan visibilidad.</div>
           <div><strong>Profesionales</strong> que buscan mostrar su trabajo online.</div>
           <div><strong>Negocios locales</strong> que quieren vender más o digitalizar su gestión.</div>
           <div><strong>Equipos</strong> que necesitan organizar tareas, turnos o datos.</div>
-        </div>
       </div>
 
       <div className="about-card">
