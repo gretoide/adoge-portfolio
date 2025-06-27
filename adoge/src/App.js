@@ -8,10 +8,6 @@ import Footer from './components/Footer/Footer';
 function App() {
   return (
     <div className="App">
-      <div className="construction-banner">
-        <i className="fa fa-cog fa-spin" style={{ marginRight: '0.5em' }}></i>
-        Sitio en construcción
-      </div>
       <Hero />
       <Services />
       <About />

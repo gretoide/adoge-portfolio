@@ -40,23 +40,21 @@ const Contact = () => {
       </form>
       <div className="contact-info mt-4">
         <p>
-          <FaEnvelope className="contact-icon" />
+          <FaEnvelope className="contact-icon email" />
           <a href="mailto:adogeinnovations@gmail.com" className="contact-email">
             adogeinnovations@gmail.com
           </a>
         </p>
-        <div className="contact-wsp-line">
-          <FaWhatsapp className="contact-icon wsp" />
-          <a href="https://wa.me/542214762150" target="_blank" rel="noopener noreferrer" className="contact-wsp">
-            Adrian <span className="wsp-number">+54 221 476 2150</span>
-          </a>
-          <span className="wsp-sep"> | </span>
-          <FaWhatsapp className="contact-icon wsp" />
-          <a href="https://wa.me/542213144468" target="_blank" rel="noopener noreferrer" className="contact-wsp">
-            Greta <span className="wsp-number">+54 221 314 4468</span>
-          </a>
-        </div>
       </div>
+      <a
+        href="https://wa.me/542214762150"
+        className="whatsapp-float"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Contactar por WhatsApp"
+      >
+        <FaWhatsapp />
+      </a>
     </section>
   );
 };

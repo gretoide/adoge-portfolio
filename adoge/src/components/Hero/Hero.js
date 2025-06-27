@@ -37,7 +37,7 @@ const Hero = () => {
   const buttonVariants = {
     hover: {
       scale: 1.05,
-      boxShadow: "0 8px 25px rgba(255,255,255,0.3)",
+      boxShadow: "0 8px 25px rgba(227, 94, 94, 0.3)",
       transition: {
         type: "spring",
         stiffness: 300
@@ -118,9 +118,9 @@ const Hero = () => {
 
         <motion.p 
           variants={itemVariants}
-          whileHover={{ 
+          whileHover={{
             scale: 1.02,
-            color: "#e0e7ff"
+            color: "#7E3992"
           }}
         >
           Impulsamos tu presencia digital

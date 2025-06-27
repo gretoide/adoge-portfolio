@@ -34,7 +34,7 @@
 
 .about h2 {
   font-size: 2.5rem;
-  color: #1e3c72;
+  color: #7E3992;
   margin-bottom: 1.2em;
   font-weight: 800;
   letter-spacing: 1px;
@@ -57,7 +57,7 @@
   margin-bottom: 0.7em;
 }
 .about h3 {
-  color: #1e3c72;
+  color: #622c71;
   font-size: 1.25rem;
   margin-top: 2em;
   margin-bottom: 0.7em;
@@ -77,74 +77,49 @@
 .about-cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 3.5em;
+  gap: 2rem;
   justify-content: center;
-  margin-top: 3.5em;
+  margin-top: 2.5rem;
 }
 
 .about-card {
   background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 6px 32px rgba(30,60,114,0.13);
+  border-radius: 1.5rem;
+  border: 1.5px solid #e0e0e0;
+  box-shadow: 0 2px 8px 0 rgba(123,120,167,0.06);
   padding: 2.2em 1.7em 2em 1.7em;
   max-width: 370px;
   min-width: 250px;
   flex: 1 1 260px;
+  transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: box-shadow 0.2s, transform 0.2s;
-  position: relative;
-  border: 1.5px solid #e6eaf3;
 }
-.about-card:hover {
-  box-shadow: 0 12px 36px rgba(30,60,114,0.18);
-  transform: translateY(-6px) scale(1.025);
-  border-color: #b3c6e6;
-}
-.about-icon {
-  font-size: 2.2rem;
-  margin-bottom: 0.7em;
-  color: #2a5298;
-  align-self: center;
-}
+
 .about-card h3 {
-  color: #1e3c72;
-  font-size: 1.22rem;
-  margin-bottom: 1em;
+  color: #7E3992;
+  font-size: 1.2rem;
   font-weight: 700;
-  letter-spacing: 0.5px;
-  align-self: center;
-  text-align: center;
+  margin-bottom: 0.7rem;
 }
-.about-card ul {
-  padding-left: 0;
-  color: #333;
-  font-size: 1.08rem;
-  line-height: 1.7;
-  margin: 0;
-  text-align: center;
-  list-style: none;
+
+.about-card p, .about-card ul, .about-card li {
+  color: #181828;
+  font-size: 1rem;
 }
-.about-card li {
-  margin-bottom: 1.1em;
+
+.about-card:hover {
+  box-shadow: 0 8px 24px rgba(126,57,146,0.10);
+  border-color: #bdbdbd;
+  background: #fff;
 }
-.about-card li b {
-  color: #1e3c72;
-  font-weight: 600;
+
+.about-icon {
+  font-size: 2rem;
+  margin-bottom: 0.7rem;
 }
-@media (max-width: 900px) {
-  .about-cards {
-    flex-direction: column;
-    gap: 2.5em;
-    align-items: center;
-  }
-  .about-card {
-    max-width: 98vw;
-    min-width: 0;
-    width: 100%;
-  }
-} 
 
 .github-links {
   list-style: none;
@@ -153,6 +128,7 @@
 }
 
 .github-links li {
+  margin-top: 20px;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -168,4 +144,17 @@
 
 .github-links a:hover {
   color: #000;
+}
+
+@media (max-width: 900px) {
+  .about-cards {
+    flex-direction: column;
+    gap: 2.5em;
+    align-items: center;
+  }
+  .about-card {
+    max-width: 98vw;
+    min-width: 0;
+    width: 100%;
+  }
 }
