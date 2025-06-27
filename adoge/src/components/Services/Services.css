@@ -30,6 +30,8 @@ section.services {
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .service-card {
@@ -43,6 +45,8 @@ section.services {
   max-width: 320px;
   flex: 1 1 220px;
   transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .service-card:hover {
@@ -78,8 +82,6 @@ section.services {
     align-items: center;
   }
   .service-card {
-    background: #72BFBF;
-    color: #fff;
     min-width: 0;
     width: 95vw;
     max-width: 98vw;
