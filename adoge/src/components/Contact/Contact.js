@@ -21,6 +21,7 @@ const Contact = () => {
   const [status, setStatus] = useState('');
   const [showWspMenu, setShowWspMenu] = useState(false);
   const wspMenuRef = useRef(null);
+  const [showSuccess, setShowSuccess] = useState(false);
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -50,8 +51,12 @@ const Contact = () => {
     )
       .then((result) => {
         setStatus('success');
+        setShowSuccess(true);
         form.current.reset();
-        setTimeout(() => setStatus(''), 5000);
+        setTimeout(() => {
+          setShowSuccess(false);
+          setTimeout(() => setStatus(''), 700);
+        }, 4300);
       }, (error) => {
         setStatus('error');
         setTimeout(() => setStatus(''), 5000);
@@ -70,7 +75,7 @@ const Contact = () => {
         <button type="submit">Enviar</button>
       </form>
       {status === 'success' && (
-        <div className="success-message animated-success">
+        <div className={`success-message animated-success${!showSuccess ? ' fade-out' : ''}`}>
           <FaCheckCircle className="success-tick" />
           ¡Tu mensaje fue enviado con éxito! Pronto nos pondremos en contacto.
         </div>
