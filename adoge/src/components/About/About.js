@@ -38,14 +38,16 @@ const About = () => (
         <p>
           Te invitamos a ver algunos de nuestros <strong>proyectos</strong>, <strong>pruebas</strong> y <strong>colaboraciones</strong> en GitHub:
         </p>
-        <ul className="github-links">
-          <li>
-            <FaGithub /> <a href="https://github.com/gretoide" target="_blank" rel="noopener noreferrer">Greta Piacentini</a>
-          </li>
-          <li>
-            <FaGithub /> <a href="https://github.com/AdrianASambido" target="_blank" rel="noopener noreferrer">Adrián Sambido</a>
-          </li>
-        </ul>
+        <div className="profile-links">
+          <div className="profile-card">
+            <img src="https://avatars.githubusercontent.com/gretoide" alt="Greta Piacentini" />
+            <a href="https://github.com/gretoide" target="_blank" rel="noopener noreferrer">Greta Piacentini</a>
+          </div>
+          <div className="profile-card">
+            <img src="https://avatars.githubusercontent.com/AdrianASambido" alt="Adrián Sambido" />
+            <a href="https://github.com/AdrianASambido" target="_blank" rel="noopener noreferrer">Adrián Sambido</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
