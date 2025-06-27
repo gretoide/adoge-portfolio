@@ -94,4 +94,34 @@ section.services {
   .service-card p {
     font-size: 0.97rem;
   }
+}
+
+@media (max-width: 700px) {
+  .services-list {
+    flex-direction: column;
+    gap: 1.2em;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .service-card {
+    background: #fff !important;
+    color: #181828;
+    padding: 1.2em 1em;
+    margin-bottom: 1.2em;
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    border-radius: 1em;
+    text-align: center;
+    font-size: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    box-shadow: 0 2px 8px 0 rgba(123,120,167,0.06);
+    border: 1.5px solid #e0e0e0;
+  }
+  .service-card-title {
+    font-size: 1.08em;
+    margin-bottom: 0.5em;
+  }
 } 
