@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# AdoGe Innovations
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="./src/images/logo_adoge.png" alt="AdoGe Logo" width="120" style="margin-bottom: 1em;" />
 
-## Available Scripts
+**Impulsamos tu presencia digital**
 
-In the project directory, you can run:
+Sitio web profesional para servicios de desarrollo web, UX/UI y soluciones digitales para emprendedores, profesionales y negocios. 
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Características principales
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Diseño responsive**: Perfecto en desktop y mobile.
+- **Logo personalizado** y favicon propio.
+- **Cards visuales** para presentación de equipo y servicios.
+- **Animaciones suaves** y detalles modernos.
+- **SEO y Social Sharing**: Meta tags Open Graph y Twitter Card para un link preview profesional.
+- **Contacto directo**: Formulario funcional y acceso rápido a WhatsApp.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🖼️ Preview
 
-### `npm run build`
+![Preview Home](./src/images/logo_adoge.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📱 Link Preview personalizado
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Al compartir el link en WhatsApp, Facebook, etc., se mostrará el logo y la descripción personalizada.
 
-### `npm run eject`
+- **Imagen:** Cambia `public/logo192.png` por tu logo cuadrado (ideal 300x300px o más).
+- **Meta tags:** Edita en `public/index.html`:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```html
+<meta property="og:title" content="AdoGe Innovations" />
+<meta property="og:description" content="Impulsamos tu presencia digital. Desarrollo web, UX/UI y soluciones digitales para emprendedores, profesionales y negocios." />
+<meta property="og:image" content="https://adoge-innovations.vercel.app/logo192.png" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://adoge-innovations.vercel.app/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="AdoGe Innovations" />
+<meta name="twitter:description" content="Impulsamos tu presencia digital. Desarrollo web, UX/UI y soluciones digitales para emprendedores, profesionales y negocios." />
+<meta name="twitter:image" content="https://adoge-innovations.vercel.app/logo192.png" />
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Forzar actualización:** Usa el [Facebook Debugger](https://developers.facebook.com/tools/debug/) tras cada deploy.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🛠️ Scripts útiles
 
-## Learn More
+- `npm start` — Ejecuta la app en modo desarrollo
+- `npm run build` — Genera el build de producción
+- `npm test` — Ejecuta los tests
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 👥 Equipo
 
-### Code Splitting
+- [Greta Piacentini](https://github.com/gretoide)
+- [Adrián Sambido](https://github.com/AdrianASambido)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 🙌 Agradecimientos
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Proyecto basado en Create React App, con personalización visual, animaciones y optimización para compartir en redes.
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+¡Gracias por visitar AdoGe Innovations!
