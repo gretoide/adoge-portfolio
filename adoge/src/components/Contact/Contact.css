@@ -317,4 +317,25 @@ section.contact {
     padding: 0.08em 0.3em;
     min-width: 30px;
   }
+  .contact-form {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .contact h2 {
+    font-size: 1.8rem;
+  }
+  .contact-icon.email {
+    font-size: 1em;
+    margin-right: 0.3em;
+    vertical-align: middle;
+  }
 } 

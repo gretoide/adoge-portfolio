@@ -100,9 +100,9 @@ const Hero = () => {
         animate="visible"
       >
         <img 
-          src={logoAdoge} 
-          alt="Logo Adoge" 
-          style={{ width: '170px', marginBottom: '1rem' }} 
+          src={logoAdoge}
+          alt="Logo Adoge"
+          className="hero-logo"
         />
         <motion.h1 
           variants={itemVariants}
