@@ -1,62 +1,66 @@
-.services {
-  background: #f7f7f7;
-  padding: 80px 20px;
-  text-align: center;
-  position: relative;
-  z-index: 3;
+section.services {
+  background: var(--color-white);
+  border-radius: 2.5rem;
+  box-shadow: 0 2px 24px 0 rgba(123,120,167,0.07);
+  padding: 2.5rem 1.5rem;
+  margin-bottom: 2rem;
 }
 
-.services h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2em;
-  color: #1e3c72;
-  position: relative;
+.services-title {
+  font-size: 2.2rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #7E3992 0%, #72BFBF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin-bottom: 1rem;
 }
 
-.services h2:after {
-  content: '';
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-  transform: translateX(-50%);
+.services-underline {
   width: 60px;
-  height: 3px;
-  background: #1e3c72;
+  height: 4px;
+  background: linear-gradient(90deg, #7E3992 0%, #72BFBF 100%);
+  border-radius: 2px;
+  margin: 0.5em auto 1.5em auto;
 }
 
 .services-list {
   display: flex;
   flex-wrap: wrap;
+  gap: 2rem;
   justify-content: center;
-  gap: 2em;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .service-card {
   background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(30,60,114,0.1);
-  padding: 2em 1.5em;
-  max-width: 300px;
-  min-width: 250px;
-  flex: 1 1 250px;
-  transition: all 0.3s ease;
+  color: #181828;
+  border-radius: 1.5rem;
+  border: 1.5px solid #e0e0e0;
+  box-shadow: 0 2px 8px 0 rgba(123,120,167,0.06);
+  padding: 2rem 1.5rem;
+  min-width: 220px;
+  max-width: 320px;
+  flex: 1 1 220px;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
 
 .service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 30px rgba(30,60,114,0.15);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(126,57,146,0.10);
+  border-color: #bdbdbd;
+  background: #fff;
 }
 
-.service-card h3 {
-  color: #1e3c72;
-  margin-bottom: 1em;
-  font-size: 1.5rem;
+.service-card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #7E3992;
+  margin-bottom: 0.5rem;
 }
 
 .service-card p {
-  color: #666;
+  color: #181828;
   line-height: 1.6;
 }
 
@@ -74,6 +78,8 @@
     align-items: center;
   }
   .service-card {
+    background: #72BFBF;
+    color: #fff;
     min-width: 0;
     width: 95vw;
     max-width: 98vw;

@@ -1,19 +1,24 @@
-.footer {
-  background: #1e3c72;
+footer {
+  background: #181828;
   color: #fff;
-  padding: 30px 20px 20px 20px;
   text-align: center;
+  padding: 2rem 0 1rem 0;
+  border-radius: 2.5rem 2.5rem 0 0;
+  box-shadow: 0 -2px 24px 0 rgba(123,120,167,0.13);
+  font-size: 1.1rem;
+  margin-top: 2rem;
 }
-.footer-links {
-  margin-top: 1em;
-}
-.footer-links a {
-  color: #fff;
-  margin: 0 1em;
-  text-decoration: none;
-  font-weight: 500;
+
+.footer-link {
+  color: #72BFBF;
+  font-weight: 600;
+  margin: 0 1.2em;
   transition: color 0.2s;
+  font-size: 1.08em;
+  letter-spacing: 0.02em;
 }
-.footer-links a:hover {
-  color: #ffd700;
+
+.footer-link:hover {
+  color: #fff;
+  color: #7E3992;
 } 

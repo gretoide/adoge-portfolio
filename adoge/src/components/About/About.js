@@ -1,37 +1,61 @@
 import React from 'react';
+import { FaGithub } from 'react-icons/fa';
 import './About.css';
 
 const About = () => (
   <section className="about" id="about">
     <h2>Sobre Nosotros</h2>
+
     <p className="about-intro">
-      Somos un equipo freelance junior especializado en soluciones digitales para emprendedores, profesionales y pequeñas empresas. Creamos herramientas simples, funcionales y con acompañamiento real.
+      Somos un equipo freelance en crecimiento, estudiantes de la Facultad de Informática de la UNLP. Combinamos formación académica con experiencia práctica en desarrollo web, UX/UI y soluciones digitales pensadas para personas reales.
     </p>
+
+    <p className="about-intro">
+      Diseñamos sitios y sistemas simples, funcionales y listos para usar, acompañando a nuestros clientes en cada paso del proceso.
+    </p>
+
     <div className="about-cards">
-      <div className="about-card">
-        <div className="about-icon">💻</div>
-        <h3>Servicios</h3>
-        <ul>
-          <li><b>Webs a medida:</b> Landing Pages, sitios institucionales y portfolios profesionales.</li>
-          <li><b>Gestión digital:</b> Sistemas CRUD para administrar turnos, clientes, productos o datos.</li>
-          <li><b>Mantenimiento:</b> Actualización, optimización y soporte para sitios existentes.</li>
-          <li><b>Bases de datos:</b> Diseño, migración y organización de información.</li>
-          <li><b>Asesoría digital:</b> Integración de redes, SEO básico y campañas promocionales.</li>
-        </ul>
-      </div>
+      
       <div className="about-card">
         <div className="about-icon">🎯</div>
-        <h3>Para quién</h3>
+        <h3>¿A quién acompañamos?</h3>
         <ul>
-          <li>Emprendedores que recién empiezan.</li>
-          <li>Profesionales que buscan presencia digital simple.</li>
-          <li>Negocios locales que quieren vender más u organizar mejor sus datos.</li>
-          <li>Personas que necesitan mostrar su trabajo (portfolio).</li>
-          <li>Equipos que necesitan automatizar tareas o gestionar información.</li>
+          <li>Emprendedores que están empezando y necesitan visibilidad.</li>
+          <li>Profesionales que buscan mostrar su trabajo online.</li>
+          <li>Negocios locales que quieren vender más o digitalizar su gestión.</li>
+          <li>Equipos que necesitan organizar tareas, turnos o datos.</li>
         </ul>
       </div>
+
+      <div className="about-card">
+        <div className="about-icon">💻</div>
+        <h3>Cómo trabajamos</h3>
+        <p>
+          Usamos herramientas actuales y buenas prácticas para crear sitios rápidos, claros y fáciles de mantener.
+        </p>
+        <p>
+          Nos enfocamos en que tengas una solución útil, sin enredos técnicos, y adaptada a tus objetivos reales.
+        </p>
+      </div>
+
+      <div className="about-card">
+        <div className="about-icon">🌐</div>
+        <h3>Conocenos un poco más</h3>
+        <p>
+          Te invitamos a ver algunos de nuestros proyectos, pruebas y colaboraciones en GitHub:
+        </p>
+        <ul className="github-links">
+          <li>
+            <FaGithub /> <a href="https://github.com/gretoide" target="_blank" rel="noopener noreferrer">Greta Piacentini</a>
+          </li>
+          <li>
+            <FaGithub /> <a href="https://github.com/AdrianASambido" target="_blank" rel="noopener noreferrer">Adrián Sambido</a>
+          </li>
+        </ul>
+      </div>
+
     </div>
   </section>
 );
 
-export default About; 
+export default About;

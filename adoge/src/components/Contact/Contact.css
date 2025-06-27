@@ -1,13 +1,22 @@
-.contact {
-  background: #f7f7f7;
-  padding: 60px 20px;
-  text-align: center;
+section.contact {
+  background: var(--color-white);
+  border-radius: 2.5rem;
+  box-shadow: 0 2px 24px 0 rgba(123,120,167,0.07);
+  padding: 2.5rem 1.5rem;
+  margin-bottom: 2rem;
 }
+
 .contact h2 {
-  font-size: 2rem;
-  color: #1e3c72;
-  margin-bottom: 1em;
+  font-size: 2.2rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #7E3992 0%, #72BFBF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin-bottom: 1rem;
 }
+
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -16,44 +25,55 @@
   margin: 0 auto 2em auto;
   position: relative;
 }
+
 .contact-form input,
 .contact-form textarea {
+  width: 100%;
   padding: 1em;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+  margin-bottom: 1.2em;
+  border: 2px solid var(--color-accent);
+  border-radius: 1.2em;
+  background: #f7f8fa;
+  color: var(--color-black);
   font-size: 1rem;
-  transition: all 0.3s ease;
+  transition: border 0.2s;
 }
+
 .contact-form input:focus,
 .contact-form textarea:focus {
+  border: 2px solid #72BFBF;
   outline: none;
-  border-color: #1e3c72;
-  box-shadow: 0 0 0 2px rgba(30, 60, 114, 0.1);
 }
+
 .contact-form textarea {
   min-height: 150px;
   resize: vertical;
 }
+
 .contact-form button {
-  background: #1e3c72;
-  color: #fff;
+  background: linear-gradient(90deg, #7E3992 0%, #72BFBF 100%);
+  color: var(--color-white);
   border: none;
-  border-radius: 8px;
-  padding: 1em;
+  border-radius: 2em;
+  padding: 0.8em 2em;
+  font-weight: 700;
   font-size: 1.1rem;
+  box-shadow: 0 4px 20px rgba(126,57,146,0.10);
   cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
 }
-.contact-form button:not(:disabled):hover {
-  background: #2a5298;
-  transform: translateY(-2px);
+
+.contact-form button:hover {
+  background: linear-gradient(90deg, #72BFBF 0%, #7E3992 100%);
+  box-shadow: 0 8px 32px rgba(114,191,191,0.18);
+  transform: translateY(-2px) scale(1.04);
 }
+
 .contact-form button:disabled {
   background: #cccccc;
   cursor: not-allowed;
 }
+
 .success-message,
 .error-message {
   margin-top: 1em;
@@ -61,38 +81,69 @@
   border-radius: 8px;
   animation: fadeIn 0.3s ease;
 }
+
 .success-message {
   background: #d4edda;
   color: #155724;
   border: 1px solid #c3e6cb;
 }
+
 .error-message {
   background: #f8d7da;
   color: #721c24;
   border: 1px solid #f5c6cb;
 }
+
 .contact-info {
   margin-top: 2em;
 }
+
 .contact-info p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0.5em 0;
-  color: #333;
+  color: #23223a;
   font-size: 1.1rem;
 }
+
+.contact-icon {
+  margin-right: 0.5em;
+  font-size: 1.2em;
+}
+
+.contact-email {
+  color: #23223a;
+  font-weight: 600;
+  font-size: 1.08em;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-email:hover {
+  color: #7E3992;
+  text-decoration: underline;
+}
+
 .contact-info a {
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
+  color: #7E3992;
 }
+
 .contact-info a[href^="mailto"] {
   color: #1e3c72;
 }
+
 .contact-info a[href^="https://wa.me"] {
   color: #25d366;
 }
+
 .contact-info a:hover {
   text-decoration: underline;
-  opacity: 0.85;
+  color: #72BFBF;
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -103,6 +154,7 @@
     transform: translateY(0);
   }
 }
+
 @media (max-width: 480px) {
   .contact-form {
     width: 100%;
@@ -112,14 +164,17 @@
     font-size: 1.8rem;
   }
 }
+
 .contact-wsp-line {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.7em;
-  margin-top: 0.7em;
+  margin-top: 0.5em;
   font-size: 1.13rem;
+  color: var(--color-accent);
 }
+
 .contact-wsp-line a {
   color: #25d366;
   font-weight: 500;
@@ -127,14 +182,17 @@
   margin: 0 0.2em;
   transition: color 0.2s;
 }
+
 .contact-wsp-line a:hover {
   text-decoration: underline;
   color: #128c7e;
 }
+
 .contact-wsp-line .fab.fa-whatsapp {
   font-size: 1.25em;
   margin-right: 0.2em;
 }
+
 .wsp-sep {
   color: #bbb;
   font-size: 1.2em;
