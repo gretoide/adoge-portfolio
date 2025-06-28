@@ -73,7 +73,7 @@ const Contact = () => {
         aria-live="assertive"
         aria-atomic="true"
         style={{
-          minWidth: '340px',
+          minWidth: window.innerWidth < 500 ? '90vw' : '340px',
           maxWidth: '90vw',
           fontWeight: 700,
           background: '#fff',
@@ -81,9 +81,9 @@ const Contact = () => {
           border: `2.5px solid ${showSuccessToast ? '#3CB371' : '#b00020'}`,
           borderRadius: '1.5em',
           boxShadow: '0 8px 32px rgba(126,57,146,0.13)',
-          padding: '1.2em 2em',
+          padding: window.innerWidth < 500 ? '0.7em 0.7em' : '1.2em 2em',
           textAlign: 'center',
-          fontSize: '1.18em',
+          fontSize: window.innerWidth < 500 ? '1em' : '1.18em',
           pointerEvents: 'auto',
           display: 'flex',
           alignItems: 'center',
