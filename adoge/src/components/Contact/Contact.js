@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import { FaEnvelope, FaWhatsapp, FaCheckCircle } from 'react-icons/fa';
 import './Contact.css';
+import ReactDOM from 'react-dom';
 
 const WHATSAPP_CONTACTS = [
   {
@@ -22,6 +23,8 @@ const Contact = () => {
   const [showWspMenu, setShowWspMenu] = useState(false);
   const wspMenuRef = useRef(null);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [showSuccessToast, setShowSuccessToast] = useState(false);
+  const [showErrorToast, setShowErrorToast] = useState(false);
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -51,17 +54,64 @@ const Contact = () => {
     )
       .then((result) => {
         setStatus('success');
-        setShowSuccess(true);
+        setShowSuccessToast(true);
+        setTimeout(() => setShowSuccessToast(false), 4000);
         form.current.reset();
-        setTimeout(() => {
-          setShowSuccess(false);
-          setTimeout(() => setStatus(''), 700);
-        }, 4300);
       }, (error) => {
         setStatus('error');
-        setTimeout(() => setStatus(''), 5000);
+        setShowErrorToast(true);
+        setTimeout(() => setShowErrorToast(false), 4000);
       });
   };
+
+  // Renderiza el toast en un portal para que esté en la capa más exterior
+  const toastPortal = (showSuccessToast || showErrorToast) ? ReactDOM.createPortal(
+    <div style={{ position: 'fixed', top: '40px', left: '50%', transform: 'translateX(-50%)', zIndex: 9999, width: '100%', display: 'flex', justifyContent: 'center', pointerEvents: 'none' }}>
+      <div
+        className={`toast-custom ${showSuccessToast ? 'toast-success' : 'toast-error'} ${showSuccessToast || showErrorToast ? 'toast-animate-in' : 'toast-animate-out'}`}
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+        style={{
+          minWidth: '340px',
+          maxWidth: '90vw',
+          fontWeight: 700,
+          background: '#fff',
+          color: showSuccessToast ? '#3CB371' : '#b00020',
+          border: `2.5px solid ${showSuccessToast ? '#3CB371' : '#b00020'}`,
+          borderRadius: '1.5em',
+          boxShadow: '0 8px 32px rgba(126,57,146,0.13)',
+          padding: '1.2em 2em',
+          textAlign: 'center',
+          fontSize: '1.18em',
+          pointerEvents: 'auto',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '0.7em',
+          transition: 'opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1), transform 0.6s cubic-bezier(0.23, 1, 0.32, 1)',
+          opacity: (showSuccessToast || showErrorToast) ? 1 : 0,
+          transform: (showSuccessToast || showErrorToast) ? 'translateY(0)' : 'translateY(-40px)',
+        }}
+      >
+        {showSuccessToast && (
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
+            <path d="M9 15.5L13 19L19 11" stroke="#3CB371" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        )}
+        {showErrorToast && (
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
+            <circle cx="14" cy="14" r="14" fill="#b00020" />
+            <path d="M10 10L18 18M18 10L10 18" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" />
+          </svg>
+        )}
+        <div className="toast-body w-100" style={{ textAlign: 'center', width: '100%' }}>
+          {showSuccessToast ? '¡Tu mensaje fue enviado con éxito!' : 'Ocurrió un error al enviar el mensaje. Intenta nuevamente más tarde.'}
+        </div>
+      </div>
+    </div>,
+    document.body
+  ) : null;
 
   return (
     <section className="contact" id="contact">
@@ -74,17 +124,7 @@ const Contact = () => {
         <textarea name="message" placeholder="Tu mensaje" required></textarea>
         <button type="submit">Enviar</button>
       </form>
-      {status === 'success' && (
-        <div className={`success-message animated-success${!showSuccess ? ' fade-out' : ''}`}>
-          <FaCheckCircle className="success-tick" />
-          ¡Tu mensaje fue enviado con éxito! Pronto nos pondremos en contacto.
-        </div>
-      )}
-      {status === 'error' && (
-        <div className="error-message">
-          Ocurrió un error al enviar el mensaje. Intenta nuevamente más tarde.
-        </div>
-      )}
+      {toastPortal}
       <div className="contact-info mt-4">
         <p>
           <FaEnvelope className="contact-icon email" />
