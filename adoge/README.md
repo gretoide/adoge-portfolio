@@ -50,7 +50,9 @@ Al compartir el link en WhatsApp, Facebook, etc., se mostrará el logo y la desc
 
 ## 🛠️ Scripts útiles
 
-- `npm start` — Ejecuta la app en modo desarrollo
+- `npm start` — Instala las dependencias del proyecto
+- `npm start` — Ejecuta la app en modo desarrollo.
+- `npm run open:browser` — Abre la aplicación en tu navegador (ejecuta - `start http://localhost:3000`) 
 - `npm run build` — Genera el build de producción
 - `npm test` — Ejecuta los tests
 
