@@ -106,10 +106,7 @@ const Hero = () => {
         />
         <motion.h1 
           variants={itemVariants}
-          whileHover={{ 
-            scale: 1.05,
-            textShadow: "0 0 20px rgba(255,255,255,0.5)"
-          }}
+          whileHover={{ scaleX: 1.2}}
           transition={{ type: "spring", stiffness: 300 }}
         >
           AdoGe
@@ -131,16 +128,6 @@ const Hero = () => {
         >
           Impulsamos tu presencia digital
         </motion.p>
-
-        <motion.a 
-          href="#contact" 
-          className="cta-button"
-          whileHover="hover"
-          whileTap="tap"
-          variants={buttonVariants}
-        >
-          ¡Trabajemos juntos!
-        </motion.a>
       </motion.div>
 
       {/* Elementos decorativos flotantes */}
