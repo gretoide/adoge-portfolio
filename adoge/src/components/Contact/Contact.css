@@ -268,6 +268,7 @@ section.contact {
 
 .wsp-menu-btn {
   display: flex;
+  width: 80%;
   align-items: center;
   gap: 0.2em;
   background: #f7f8fa;
@@ -282,7 +283,7 @@ section.contact {
   transition: background 0.12s, color 0.12s;
   cursor: pointer;
   min-width: 55px;
-  justify-content: center;
+  justify-content: left;
 }
 
 .wsp-menu-btn:last-child {
